@@ -2,8 +2,24 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  
+  getHello(): number | string {
+    let res, resl: number | string;
+    let a, b: number;
+    a=59594;
+    b=514654;
+    if(a>b){
+      res = a;
+      resl = "a";
+    }
+    else if(b>a){
+      res = b;
+      resl = "b";
+    }
+    else{
+      res = "Два числа рівні між собою"
+    }
+    return "Найбільше значення дорівнює значенню &#34;" + resl + '&#34;, тобто дорівнює <b><u><em>' + res + '</em></u></b>';
   }
 
   getNumbers(): number {
@@ -43,4 +59,5 @@ export class AppService {
   MultArr = 1;
     return MultArr1 + ', ' + MultArr;
   }
+
 }
