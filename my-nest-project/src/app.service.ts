@@ -5,21 +5,22 @@ export class AppService {
   
   getHello(): number | string {
     let res, resl: number | string;
+    resl="";
     let a, b: number;
     a=59594;
     b=514654;
     if(a>b){
       res = a;
-      resl = "a";
+      resl = "Найбільше значення дорівнює значенню &#34;a&#34;, тобто дорівнює ";
     }
     else if(b>a){
       res = b;
-      resl = "b";
+      resl = "Найбільше значення дорівнює значенню &#34;b&#34;, тобто дорівнює ";
     }
     else{
       res = "Два числа рівні між собою"
     }
-    return "Найбільше значення дорівнює значенню &#34;" + resl + '&#34;, тобто дорівнює <b><u><em>' + res + '</em></u></b>';
+    return resl + '<b><u><em>' + res + '</em></u></b>';
   }
 
   getNumbers(): number {
