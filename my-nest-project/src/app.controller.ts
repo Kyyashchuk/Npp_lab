@@ -7,7 +7,6 @@ export class AppController {
 
   @Get()
   getHello(): Books {
-
     return this.appService.getHello();
   }
 }
